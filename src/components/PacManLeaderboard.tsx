@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Home, Settings, Trophy, Medal, Crown, Star, TrendingUp, Zap, Shield, Flame, Filter, Calendar, Award } from 'lucide-react';
-import logo from './assets/trbg.png';
+import logo from '../assets/trbg.png';
 
 interface PacManLeaderboardProps {
   onBack: () => void;

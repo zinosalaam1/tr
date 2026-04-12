@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Menu, Search, Settings, Bell, MessageCircle, Wallet, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Filter, Star, Clock, TrendingUp, Gamepad2 } from 'lucide-react';
-import logo from './assets/trbg.png';
+import logo from '../assets/trbg.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ALL_GAMES, getAllCategories } from '../utils/gameConfig';
 

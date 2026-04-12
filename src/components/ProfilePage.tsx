@@ -1,5 +1,5 @@
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Edit, Share, ArrowLeft, Send, Calendar, Flame, Gamepad2, Bell, MessageCircle, Wallet } from 'lucide-react';
-import logo from './assets/trbg.png';
+import logo from '../assets/trbg.png';
 import friendsIcon from 'figma:asset/7a81df82621eedb1cc9f1991dc33c9c53d7f0247.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useState } from 'react';
