@@ -1,5 +1,5 @@
 import { Gamepad2 } from 'lucide-react';
-import logo from 'src/assets/trbg.png';
+import logo from './assets/trbg.png';
 import { Input } from './ui/input';
 
 interface EmailAuthPageProps {

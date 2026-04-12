@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Gamepad2, Zap } from 'lucide-react';
 import { FaTwitter, FaDiscord, FaYoutube, FaTiktok } from 'react-icons/fa';
-import logo from 'src/assets/trbg.png';
+import logo from './assets/trbg.png';
 import { SignInPage } from './components/SignInPage';
 import { HomePage } from './components/HomePage';
 import { SettingsPage } from './components/SettingsPage';

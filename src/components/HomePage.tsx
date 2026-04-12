@@ -1,5 +1,5 @@
 import { Menu, Search, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Settings, Bell, MessageCircle, Wallet, LogOut } from 'lucide-react';
-import logo from 'src/assets/trbg.png';
+import logo from './assets/trbg.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
 import { ALL_GAMES, getFeaturedGames } from '../utils/gameConfig';

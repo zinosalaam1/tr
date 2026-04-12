@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Medal, TrendingUp, Filter, ChevronDown, Bell, MessageCircle, Wallet, Star, Award, Gamepad2 } from 'lucide-react';
-import logo from 'src/assets/trbg.png';
+import logo from './assets/trbg.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface LeaderboardsPageProps {

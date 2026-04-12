@@ -1,5 +1,5 @@
 import { Menu, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Swords, Clock, DollarSign, User } from 'lucide-react';
-import logo from 'src/assets/trbg.png';
+import logo from './assets/trbg.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
