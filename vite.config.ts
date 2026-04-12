@@ -1,26 +1,34 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
 
-  import { defineConfig } from 'vite';
-  import react from '@vitejs/plugin-react';
-  import tailwindcss from '@tailwindcss/vite';
-  import path from 'path';
-
+// ✅ Safe Figma asset resolver
 function figmaAssetResolver() {
   return {
     name: 'figma-asset-resolver',
-    resolveId(id) {
+    resolveId(id: string) {
       if (id.startsWith('figma:asset/')) {
-        const filename = id.replace('figma:asset/', '')
-        return path.resolve(__dirname, 'src/assets', filename)
+        const filename = id.replace('figma:asset/', '');
+        return path.resolve(__dirname, 'src/assets', filename);
       }
+      return null; // 🔥 IMPORTANT (prevents build issues)
     },
-  }
+  };
 }
 
-  export default defineConfig({
-    plugins: [react(), tailwindcss(), figmaAssetResolver()],
-    resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-      alias: {
+export default defineConfig({
+  // ✅ FIXES CSS + asset loading on Vercel
+  base: './',
+
+  plugins: [
+    react(),
+    tailwindcss(),
+    figmaAssetResolver(),
+  ],
+
+  resolve: {
+    alias: {
         'vaul@1.1.2': 'vaul',
         'sonner@2.0.3': 'sonner',
         'recharts@2.15.2': 'recharts',
@@ -60,15 +68,37 @@ function figmaAssetResolver() {
         '@radix-ui/react-alert-dialog@1.1.6': '@radix-ui/react-alert-dialog',
         '@radix-ui/react-accordion@1.2.3': '@radix-ui/react-accordion',
         '@': path.resolve(__dirname, './src'),
+    },
+  },
+
+  build: {
+    target: 'esnext',
+    outDir: 'dist',
+
+    // ✅ Improve performance (code splitting)
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+
+          // split heavy UI libs
+          radix: [
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-checkbox',
+          ],
+        },
       },
     },
-    build: {
-      target: 'esnext',
-      outDir: 'dist',
-    },
-    server: {
-      port: 3000,
-      open: true,
-    },
-    base: "./",
-  });
+
+    // optional: silence warning
+    chunkSizeWarningLimit: 1000,
+  },
+
+  server: {
+    port: 3000,
+    open: true,
+  },
+});
