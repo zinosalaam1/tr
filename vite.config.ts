@@ -19,7 +19,7 @@ function figmaAssetResolver() {
 
 export default defineConfig({
   // ✅ FIXES CSS + asset loading on Vercel
-  base: './',
+  base: '/',
 
   plugins: [
     react(),
