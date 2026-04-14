@@ -14,7 +14,7 @@ interface HomePageProps {
 }
 
 const leaderboardPlayers = [
-  { rank: 1, name: 'Neonking', points: '87,500 points', avatar: '🎮', color: 'bg-yellow-500' },
+  { rank: 1, name: 'Zinoln', points: '87,500 points', avatar: '🎮', color: 'bg-yellow-500' },
   { rank: 2, name: 'Pixelwizard', points: '81,850 points', avatar: '🎯', color: 'bg-blue-500' },
   { rank: 3, name: 'Speedrunner', points: '74,250 points', avatar: '⚡', color: 'bg-orange-500' },
   { rank: 4, name: 'Retromaster', points: '68,900 points', avatar: '👾', color: 'bg-purple-500' },

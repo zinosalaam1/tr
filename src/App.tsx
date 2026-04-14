@@ -42,6 +42,7 @@ import { FreeSignupComplete } from './components/FreeSignupComplete';
 import { FreeHomePage } from './components/FreeHomePage';
 import { GameComingSoon } from './components/GameComingSoon';
 import { getGameById } from './utils/gameConfig';
+import StreetFight from "./assets/strfight.png";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'landing' | 'signup' | 'emailAuth' | 'planSelection' | 'freeComplete' | 'subscription' | 'payment' | 'cardDetails' | 'signIn' | 'home' | 'settings' | 'profile' | 'tournaments' | 'tournamentDetails' | 'tournamentBracket' | 'leaderboards' | 'socials' | 'rewards' | 'marketplace' | 'events' | 'shop' | 'premium' | 'quickmatch' | 'notifications' | 'messages' | 'wallet' | 'gamelibrary' | 'duelmatch' | 'teambattle' | 'pacman' | 'pacmanleaderboard' | string>('landing');
@@ -647,7 +648,7 @@ export default function App() {
             { 
               title: 'Street Fighter', 
               emoji: '🥊',
-              image: 'https://images.unsplash.com/photo-1759171053096-e7dbe7c36eb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWdodGluZyUyMGdhbWUlMjBhcmNhZGU8ZW58MXx8fHwxNzc1NzAyNDczfDA&ixlib=rb-4.1.0&q=80&w=1080',
+              image: StreetFight,
               gradient: 'from-red-600 to-orange-600'
             }
           ].map((game, idx) => (
